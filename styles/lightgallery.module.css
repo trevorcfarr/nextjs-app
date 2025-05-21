@@ -1,0 +1,10 @@
+.lgBackdrop {
+	background-color: rgb(1, 1, 1) !important;
+	opacity: 80% !important;
+}
+
+/* Global styles that will be applied with :global */
+:global(.lg-backdrop) {
+	background-color: rgb(1, 1, 1) !important;
+	opacity: 80% !important;
+}

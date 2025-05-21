@@ -10,10 +10,9 @@ function Footer() {
 			animate={{ opacity: 1 }}
 			transition={{
 				ease: [0.25, 0.1, 0.25, 1],
-				duration: 0.7,
-				delay: 0.4
+				duration: 0.7
 			}}
-			className='w-full bg-black'
+			className='w-full bg-black mt-auto'
 		>
 			<div className='flex py-8 flex-col sm:flex-row gap-8 items-center justify-center'>
 				<Image

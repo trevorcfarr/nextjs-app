@@ -7,9 +7,9 @@ const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
 export default function ContactPage() {
 	return (
-		<>
+		<div className='flex flex-col min-h-screen'>
 			<NavBar />
-			<div className='flex flex-col items-center justify-center min-h-[60vh] p-8'>
+			<div className='flex flex-col items-center justify-center flex-grow p-8'>
 				<h1 className='text-4xl font-bold mb-8'>Contact</h1>
 				<div className='max-w-2xl text-center'>
 					<p className='mb-4'>For inquiries, please contact Nicole at:</p>
@@ -19,6 +19,6 @@ export default function ContactPage() {
 				</div>
 			</div>
 			<Footer />
-		</>
+		</div>
 	);
 }

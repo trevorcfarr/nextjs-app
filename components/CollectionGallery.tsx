@@ -21,12 +21,12 @@ export default function CollectionGallery({ collection }: CollectionGalleryProps
 	const galleryRef = useRef<HTMLDivElement>(null);
 
 	return (
-		<>
+		<div className='flex flex-col min-h-screen'>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
-				className='flex flex-col items-center justify-center w-full mx-auto p-8'
+				className='flex flex-col items-center justify-center w-full mx-auto p-8 flex-grow'
 			>
 				<Link
 					href='/'
@@ -87,6 +87,6 @@ export default function CollectionGallery({ collection }: CollectionGalleryProps
 				)}
 			</motion.div>
 			<Footer />
-		</>
+		</div>
 	);
 }

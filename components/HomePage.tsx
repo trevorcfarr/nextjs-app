@@ -27,26 +27,28 @@ interface HomePageProps {
 
 export default function HomePage({ items }: HomePageProps) {
 	return (
-		<div className='flex flex-col items-center justify-center w-full mx-auto overflow-y-hidden'>
+		<div className='flex flex-col min-h-screen'>
 			<NavBar />
-			<Banner />
-			<AnimatedSection />
-			<Bio />
-			<div className='my-10 text-4xl uppercase py-4 font-semibold z-10 w-full text-center'>My Work</div>
-			<div className='flex flex-col items-center justify-center w-full gap-10 pb-16'>
-				{items.map((item, index) => (
-					<HomeItem
-						key={item.title}
-						title={item.title}
-						subtitle={item.subtitle}
-						description={item.description}
-						body={item.body}
-						path={item.path}
-						logo={item.logo}
-						images={item.images}
-						index={index}
-					/>
-				))}
+			<div className='flex flex-col items-center justify-center w-full mx-auto flex-grow'>
+				<Banner />
+				<AnimatedSection />
+				<Bio />
+				<div className='my-10 text-4xl uppercase py-4 font-semibold z-10 w-full text-center'>My Work</div>
+				<div className='flex flex-col items-center justify-center w-full gap-10 pb-16'>
+					{items.map((item, index) => (
+						<HomeItem
+							key={item.title}
+							title={item.title}
+							subtitle={item.subtitle}
+							description={item.description}
+							body={item.body}
+							path={item.path}
+							logo={item.logo}
+							images={item.images}
+							index={index}
+						/>
+					))}
+				</div>
 			</div>
 			<Footer />
 		</div>
